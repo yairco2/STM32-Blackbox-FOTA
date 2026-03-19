@@ -2,3 +2,6 @@ run_tests
 *.o
 run_integration
 run_bt_test
+run_logger_test
+run_full_system
+blackbox_log.bin
