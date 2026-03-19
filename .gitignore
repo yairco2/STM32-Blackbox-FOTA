@@ -1,3 +1,4 @@
 run_tests
 *.o
 run_integration
+run_bt_test
