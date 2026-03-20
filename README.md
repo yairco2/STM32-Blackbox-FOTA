@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     %% Define Styles
     classDef hardware fill:#444,stroke:#333,stroke-width:2px,color:#fff;
@@ -54,3 +55,4 @@ graph TD
     %% Styling links for clarity
     linkStyle 0,1,2,3,4,5 stroke:#ff0000,stroke-width:2px; %% FOTA is Red
     linkStyle 6,7,8,9,10 stroke:#00ff00,stroke-width:2px; %% Telemetry is Green
+```
