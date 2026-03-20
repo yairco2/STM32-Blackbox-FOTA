@@ -7,7 +7,7 @@ graph TD
     classDef pc fill:#274e13,stroke:#333,stroke-width:2px,color:#fff;
 
     %% PC / Ground Control Layer
-    subgraph Ground Control Station (Python)
+    subgraph GCS [Ground Control Station - Python]
         FOTA_PC[fota_pusher.py]:::pc
         PLOT_PC[telemetry_plotter.py]:::pc
     end
@@ -19,12 +19,12 @@ graph TD
     FLASH_HW((Internal Flash)):::hardware
 
     %% Interrupts (Top Half)
-    subgraph Hardware Interrupts (ISR)
+    subgraph ISR [Hardware Interrupts]
         UART_ISR[UART RX ISR]:::hardware
     end
 
     %% Application Layer (Bottom Half / RTOS)
-    subgraph app_main.c (Super Loop / FreeRTOS)
+    subgraph APP [app_main.c - Super Loop / FreeRTOS]
         BT_MGR[bt_manager.c\nCommand Router]:::task
         FOTA_HND[fota_handler.c\nState Machine]:::task
         IMU_DRV[imu_driver.c\nSensor Reader]:::task
@@ -33,7 +33,7 @@ graph TD
     end
 
     %% Abstraction Layer
-    subgraph Hardware Abstraction Layer (HAL)
+    subgraph HAL [Hardware Abstraction Layer]
         FLASH_IF[flash_interface.h]:::task
     end
 
