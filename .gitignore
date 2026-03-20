@@ -1,7 +1,26 @@
+# Ignore PC simulation binaries
 run_tests
-*.o
 run_integration
 run_bt_test
 run_logger_test
 run_full_system
 blackbox_log.bin
+
+# Build artifacts and binaries
+Debug/
+Release/
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+
+# IDE specific files
+.metadata/
+.settings/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+
